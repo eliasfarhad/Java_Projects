@@ -1,0 +1,9 @@
+cat
+dog
+rat
+fish
+car,automobile,vehicle
+up,down,left,right
+arrow,zebra
+one,two,three,4,5,six,77777
+ten,twenty,thirty-three,forty,fifty,sixty
