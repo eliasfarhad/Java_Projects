@@ -18,12 +18,12 @@ public class Triangle {
 
       String fileName = "triangle.txt";
       File textFile = new File(fileName);
-      Scanner in = new Scanner(textFile);
-      BufferedReader br = new BufferedReader(new FileReader(textFile));
+      Scanner scan = new Scanner(textFile);
+      BufferedReader reader = new BufferedReader(new FileReader(textFile));
 
       int height = 0;
       String line2 = null;
-      while ((line2 = br.readLine()) != null) {
+      while ((line2 = reader.readLine()) != null) {
          height++;
       }
       System.out.println("The height of the triangle is: " + height + " rows.");
@@ -32,9 +32,9 @@ public class Triangle {
       
       int row = 0;
       String line;
-      line = in.nextLine();                                     // read the first line
+      line = scan.nextLine();                                     // read the first line
 
-      while (in.hasNextLine() || row < 100) {                   // the loop is true if there is at least one more line left 
+      while (scan.hasNextLine() || row < 100) {                   // the loop is true if there is at least one more line left 
                                                                 // or the row count is less than 100.
          StringTokenizer tokenizer = new StringTokenizer(line, " ");
          String token = tokenizer.nextToken();                  // Store a string token
@@ -50,7 +50,7 @@ public class Triangle {
          row++;
 
          if (row != 100)
-            line = in.nextLine();                              // keep on reading the next line (until the row count has hit 100)
+            line = scan.nextLine();                              // keep on reading the next line (until the row count has hit 100)
       }
 
       int total = 0;
@@ -72,6 +72,6 @@ public class Triangle {
 
       System.out.println("\nThe maximum total from top to bottom is: " + total);                // print result
 
-      in.close();
+      scan.close();
    }
 }
